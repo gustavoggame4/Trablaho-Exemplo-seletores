@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <title>Exemplos de Seletores CSS</title>
+  <style>
+    #topo { color: blue; }
+    .cor-verde { color: green; }
+    p.letraazul { color: blue; }
+    table { color: red; }
+    * { margin: 0; padding: 0; }
+    div#myid li p.info { color: purple; }
+    div > strong { color: red; }
+    p + p { background: #ffdddd; }
+    p[title] { font-style: italic; }
+    div[class="error"] { border: 1px solid red; }
+    td[headers~="col1"] { background: yellow; }
+    p[lang|="en"] { font-weight: bold; }
+    h1, h2 { text-transform: uppercase; }
+    a:link { color: blue; }
+    a:visited { color: blue; }
+    a:hover { background: lightblue; }
+    a:active { color: black; }
+    input:focus { background: lightyellow; }
+    p::first-letter { font-size: 2em; }
+    p::first-line { color: gray; }
+    a::before { content: "«"; color: blue; }
+    a::after { content: "»"; color: red; }
+    div.article p:first-child { font-style: italic; }
+    p { color: gray; }
+    .teste-cascata { color: green; }
+    #exemplo-cascata { color: red; }
+
+    /* Importante */
+    .exemplo-importante {
+      color: green !important;
+    }
+    #exemplo-importante {
+      color: red;
+    }
+  </style>
+</head>
+<body>
+<header>
+<h1>Exemplos de Seletores CSS</h1>
+<ul>
+  <li><a href="#id">ID</a></li>
+  <li><a href="#classe">Classe</a></li>
+  <li><a href="#tag">Tag</a></li>
+  <li><a href="#universal">Universal</a></li>
+  <li><a href="#descendente">Descendente</a></li>
+  <li><a href="#filho">Filho</a></li>
+  <li><a href="#adjacente">Adjacente</a></li>
+  <li><a href="#atributo">Atributo</a></li>
+  <li><a href="#agrupamento">Agrupamento</a></li>
+  <li><a href="#pseudo-classe">Pseudo-classe</a></li>
+  <li><a href="#pseudo-elemento">Pseudo-elemento</a></li>
+  <li><a href="#cascata">Cascata</a></li>
+  <li><a href="#importante">Importante</a></li>
+</ul>
+</header>
+<hr id="id">
+<h2>ID</h2>
+<p id="topo">Texto com ID</p>
+
+<hr id="classe">
+<h2>Classe</h2>
+<p class="cor-verde">Texto com classe cor-verde</p>
+<p class="letraazul">Texto com classe letraazul</p>
+
+<hr id="tag">
+<h2>Tag</h2>
+<table><tr><td>Texto em tabela</td></tr></table>
+
+<hr id="universal">
+<h2>Universal</h2>
+<p>Texto com seletor universal</p>
+
+<hr id="descendente">
+<h2>Descendente</h2>
+<div id="myid">
+  <ul>
+    <li><p class="info">Parágrafo dentro de div e li</p></li>
+  </ul>
+</div>
+
+<hr id="filho">
+<h2>Filho</h2>
+<div>
+  <strong>Texto um</strong>
+  <p><strong>Texto dois</strong></p>
+</div>
+
+<hr id="adjacente">
+<h2>Adjacente</h2>
+<p>Parágrafo um</p>
+<p>Parágrafo dois</p>
+
+<hr id="atributo">
+<h2>Atributo</h2>
+<p title="exemplo">Parágrafo com title</p>
+<div class="error">Div com classe error</div>
+<table>
+  <tr><td headers="col1 col2">Celula com headers</td></tr>
+</table>
+<p lang="en-us">Parágrafo com lang en-us</p>
+
+<hr id="agrupamento">
+<h2>Agrupamento</h2>
+<h1>Aluno</h1>
+<h2>Gustavo Pacheco Delazari</h2>
+<h3>Ra 60005713</h3>
+
+<hr id="pseudo-classe">
+<h2>Pseudo-classe</h2>
+<a href="#">Link</a><br>
+<input type="text" placeholder="Digite algo">
+
+<hr id="pseudo-elemento">
+<h2>Pseudo-elemento</h2>
+<p>Texto com primeira letra grande e primeira linha cinza</p>
+<a href="#">Link com símbolos</a>
+
+<hr id="cascata">
+<h2>Cascata</h2>
+<p class="teste-cascata" id="exemplo-cascata">Texto afetado pela cascata</p>
+
+<hr id="importante">
+<h2>Importante</h2>
+<p class="exemplo-importante" id="exemplo-importante">Texto com !important</p>
+
+</body>
+</html>
